@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Generater</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  </head>
+  <body>
+       <header>
+      <div class="nav">
+        <a href="#">
+            <div class="logo">
+                <h1>Card Generater</h1>
+            </div>
+        </a>
+
+        <div class="nav-items">
+            <ul class="mobile-menu">
+                <div class="momenutop">
+                    <i class="fa-solid fa-xmark" id="mobile-menu-close"></i>
+                </div>
+                <li><a href="#" class="active">home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Our websites</a></li>
+            </ul>
+        </div>
+
+        <i class="fa-solid fa-bars" id="mobile-menu-open"></i>
+    </div>
+    </header>
+
+<main>
+
+    <div class="input">
+      <div>
+                <input type="text" id="name" placeholder="Name" autocomplete="name"  />
+        <div class="address-domin">
+          <input type="text" id="address" placeholder="Address" autocomplete="address-level1" />
+          <input type="text" id="domain" placeholder="Domain"  />
+        </div>
+        <div class="btnarea">
+        <button onclick="generateCoverLetter()" id="Sumbit-btn">Generate</button>
+        <button id="download-btn" onclick="downloadAsImage()" id="Sumbit-btn">Download as JPG</button>
+      </div>
+      </div>
+      <div id="notify"></div>
+    </div>
+    
+    <div class="container">
+      <h2 id="headline">Your Generated Cover Letter</h2>
+      <hr />
+      <div class="sec">
+        <div id="output-container">
+          <div id="output"></div>
+        </div>
+      </div>
+      <hr />
+      <p id="note">Note : For the domain registration, you need to submit a Cover letter. </p>
+    </div>
+</main>
+
+
+<div class="error-maincontainer">
+<div class="error-container">
+  <h3 id="maintext">Small Screen  </h3>
+<p id="error">Please Enable Desktop site</p>
+</div>
+</div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
